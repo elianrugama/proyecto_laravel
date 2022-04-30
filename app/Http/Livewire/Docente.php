@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Docentes;
 
+
 class Docente extends Component
 {
     
@@ -36,7 +37,7 @@ class Docente extends Component
     }
     public function editar($id)
     {
-        $docente = Docente::findOrFail($id);
+        $docente = Docentes::findOrFail($id);
         $this->id_docentes = $id;
         $this->nombre = $docente->nombre;
         $this->carrera = $docente->carrera;
@@ -45,13 +46,13 @@ class Docente extends Component
 
     public function borrar($id)
     {
-        Docente::find($id)->delete();
+        Docentes::find($id)->delete();
         session()->flash('message', 'Registro eliminado correctamente');
     }
 
     public function guardar()
     {
-        Docente::updateOrCreate(['id'=>$this->id_docentes],
+        Docentes::updateOrCreate(['id'=>$this->id_docentes],
             [
                 'nombre' => $this->nombre,
                 'carrera' => $this->carrera
