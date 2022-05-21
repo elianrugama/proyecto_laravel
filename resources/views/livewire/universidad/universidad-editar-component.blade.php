@@ -1,7 +1,7 @@
 <div class="p-4">
     <x-slot name="header">
         <h2 class="text-xl font-semibold leading-tight">
-            Crea o edita datos de la universidad
+            Crea o edita datos de los docentes
         </h2>
     </x-slot>
     <div>
@@ -12,7 +12,7 @@
                 </x-slot>
 
                 <x-slot name="description">
-                    Crear / actualiza los datos de la universidad
+                    Crear / actualiza los datos de los docentes
                 </x-slot>
 
                 <x-slot name="form">
